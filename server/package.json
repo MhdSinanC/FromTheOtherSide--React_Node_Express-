@@ -14,5 +14,8 @@
   "repository": {
     "type": "git",
     "url": "default"
+  },
+  "dependencies": {
+    "cors": "^2.8.6"
   }
 }

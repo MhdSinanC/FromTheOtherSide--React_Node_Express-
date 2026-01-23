@@ -1,12 +1,15 @@
 import express from 'express';
 import apiRouter from './routers/api.js';
 import { errorHandler } from './middleware/errorHandler.js';
+import cors from 'cors'
 
 const app = express()
 
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 
 app.use(express.json())
+
+app.use(cors())
 
 app.use('/api', apiRouter)
 
