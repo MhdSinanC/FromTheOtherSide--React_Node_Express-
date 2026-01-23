@@ -3,6 +3,9 @@ import './Upload.css'
 
 export default function Upload() {
 
+    const API_URL = import.meta.env.VITE_API_URL
+
+
     const [formData, setFormData] = useState({
         title: '',
         text: '',
@@ -22,7 +25,7 @@ export default function Upload() {
         // console.log(formData)
 
         try {
-            const res = await fetch('/api', {
+            const res = await fetch(`${API_URL}/api`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

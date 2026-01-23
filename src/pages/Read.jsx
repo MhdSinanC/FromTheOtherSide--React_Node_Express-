@@ -8,12 +8,14 @@ export default function SightingsPage() {
   const [error, setError] = useState(null)
   const [expandedIndex, setExpandedIndex] = useState(null);
 
+  const API_URL = import.meta.env.VITE_API_URL
+
 
 
   useEffect(() => {
     async function fetchSightings() {
       try {
-        const res = await fetch("/api")
+        const res = await fetch(`${API_URL}/api`)
         const data = await res.json()
         setCards(data)
       } catch (err) {
