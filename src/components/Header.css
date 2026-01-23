@@ -1,0 +1,20 @@
+.top-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.top-header>img {
+    max-width: 65px;
+}
+
+#main-navigation {
+    display: flex;
+    gap: 1rem;
+}
+
+#main-navigation>a {
+    color: white;
+}

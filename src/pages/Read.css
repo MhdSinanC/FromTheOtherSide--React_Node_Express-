@@ -1,0 +1,95 @@
+.error-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.sightings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sightings .page-title {
+    font-size: 3rem;
+    font-family: 'Creepster', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.sighting-cards-container {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.sighting-card {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+.sighting-date {
+    color: #605b5b;
+}
+
+.sighting-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.sighting-description {
+    padding-bottom: 0.8rem;
+    text-align: justify;
+}
+
+/* Wrapper that holds the text */
+.sighting-description-wrapper {
+    position: relative;
+    max-height: 3.5em;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+/* Fade effect at the bottom (collapsed state) */
+.sighting-description-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1em;
+  /* Fade from transparent to background color */
+  background: linear-gradient(
+    transparent,
+    #f5f5f5
+  );
+}
+
+/* When the card is expanded, show all text */
+.sighting-card.expanded .sighting-description-wrapper {
+  max-height: none; /* large enough */
+}
+
+/* When expanded, remove the fade effect */
+.sighting-card.expanded .sighting-description-wrapper::after {
+  content: none;
+}
+
+
+.read-more-btn {
+  margin-top: 0.75rem;
+  background: none;
+  border: none;
+  color: #555;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
